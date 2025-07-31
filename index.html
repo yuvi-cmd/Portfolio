@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YUVI | Developer Portfolio</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 5px;
+      color: #aaa;
+    }
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .section-title {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #444;
+      border-left: 5px solid #0077ff;
+      padding-left: 10px;
+    }
+    .skills, .projects {
+      display: grid;
+      gap: 15px;
+    }
+    .skill, .project {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .project h3 {
+      margin-bottom: 5px;
+      color: #0077ff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #ccc;
+    }
+    .socials {
+      margin-top: 10px;
+    }
+    .socials a {
+      margin: 0 10px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 1.5em;
+    }
+    .socials a:hover {
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      nav { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>YUVI</h1>
+    <p>Web Developer | AI Bot Creator | YouTuber</p>
+  </header>
+
+  <nav>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="skills">
+    <h2 class="section-title">💻 Skills</h2>
+    <div class="skills">
+      <div class="skill">✅ PHP & MySQL</div>
+      <div class="skill">✅ HTML & CSS</div>
+      <div class="skill">✅ Python & AI Scripting</div>
+      <div class="skill">✅ Telegram Bots (using Termux)</div>
+      <div class="skill">✅ Git & GitHub</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">🚀 Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>AI Telegram Assistant</h3>
+        <p>Created an AI-powered Telegram bot using Termux, PHP/Python, and Gemini API. Hosted on shared hosting.</p>
+      </div>
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>This professional portfolio website to showcase coding and development skills. Hosted on GitHub Pages.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">📬 Contact</h2>
+    <p>You can reach out to me via YouTube or Telegram.</p>
+    <div class="socials">
+      <a href="https://youtube.com/@yuvicode" target="_blank">📺 YouTube</a>
+      <a href="https://t.me/code_yuvi" target="_blank">💬 Telegram</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 YUVI. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

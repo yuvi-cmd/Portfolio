@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YuviCode - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background: #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4b6cb7;
+        }
+
+        section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #182848;
+            text-align: center;
+        }
+
+        .about p, .skills p {
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .skills-grid, .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-card, .project-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover, .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #4b6cb7;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .project-card a {
+            color: #4b6cb7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact input, .contact textarea {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .contact textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact button {
+            padding: 0.8rem;
+            background: #4b6cb7;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact button:hover {
+            background: #182848;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: #4b6cb7;
+            font-size: 1.2rem;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #182848;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .success-message, .error-message {
+            text-align: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>YuviCode</h1>
+        <p>PHP | Python | AI Integration | Telegram Bots | Web Development</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+            <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+            <li><a href="#skills" onclick="scrollToSection('skills')">Skills</a></li>
+            <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
+            <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <!-- Home section content is in header -->
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate coder specializing in PHP, Python, and AI integration. With expertise in building Telegram bots, websites, and AI tools like voice assistants, I create innovative solutions to solve real-world problems.</p>
+        <p>Explore my work on <a href="https://www.youtube.com/@yuvicode" target="_blank">YouTube (@yuvicode)</a> and join my <a href="https://t.me/code_yuvi" target="_blank">Telegram community (code_yuvi)</a> for coding tips and updates!</p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">PHP</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">AI Integration</div>
+            <div class="skill-card">Telegram Bot Development</div>
+            <div class="skill-card">Web Development</div>
+            <div class="skill-card">AI Voice Assistants</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>AI Chatbot for Telegram</h3>
+                <p>Developed a Telegram bot using Python and PHP that functions as an AI chatbot, providing interactive responses powered by natural language processing.</p>
+                <a href="https://t.me/code_yuvi" target="_blank">View on Telegram</a>
+            </div>
+            <div class="project-card">
+                <h3>Shopping & Selling Bot</h3>
+                <p>Created a Telegram bot for e-commerce, enabling users to browse products, make purchases, and sell items, integrated with payment APIs.</p>
+                <a href="https://t.me/code_yuvi" target="_blank">View on Telegram</a>
+            </div>
+            <div class="project-card">
+                <h3>DNS Bot</h3>
+                <p>Built a Telegram bot to manage DNS settings, allowing users to query and update DNS records via simple commands.</p>
+                <a href="https://t.me/code_yuvi" target="_blank">View on Telegram</a>
+            </div>
+            <div class="project-card">
+                <h3>AI Voice Assistant (Jarvis)</h3>
+                <p>Developed an AI-powered voice assistant using Python, capable of executing tasks, answering queries, and integrating with smart devices.</p>
+                <a href="https://www.youtube.com/@yuvicode" target="_blank">Watch on YouTube</a>
+            </div>
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Designed and developed responsive websites for clients, showcasing their work with modern UI/UX principles.</p>
+                <a href="https://www.youtube.com/@yuvicode" target="_blank">Watch on YouTube</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $name = htmlspecialchars(trim($_POST['name']));
+            $email = htmlspecialchars(trim($_POST['email']));
+            $message = htmlspecialchars(trim($_POST['message']));
+            $to = "your-email@example.com"; // Replace with your email
+            $subject = "New Contact Form Submission from $name";
+            $body = "Name: $name\nEmail: $email\nMessage: $message";
+            $headers = "From: $email";
+
+            if (empty($name) || empty($email) || empty($message)) {
+                echo "<div class='error-message'>All fields are required.</div>";
+            } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                echo "<div class='error-message'>Invalid email format.</div>";
+            } else {
+                if (mail($to, $subject, $body, $headers)) {
+                    echo "<div class='success-message'>Message sent successfully!</div>";
+                } else {
+                    echo "<div class='error-message'>Failed to send message. Please try again later.</div>";
+                }
+            }
+        }
+        ?>
+        <form method="POST" action="#contact">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@yuvicode" target="_blank">YouTube (@yuvicode)</a>
+            <a href="https://t.me/code_yuvi" target="_blank">Telegram (code_yuvi)</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 YuviCode. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
